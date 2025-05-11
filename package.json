@@ -14,8 +14,8 @@
     },
     "lint-staged": {
         "*.ts": [
-            "npm run format",
-            "npm run lint"
+            "pnpm run format",
+            "pnpm run lint"
         ]
     },
     "devDependencies": {
