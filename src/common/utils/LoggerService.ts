@@ -2,6 +2,20 @@ import winston from 'winston';
 import morgan from 'morgan';
 import path from 'path';
 
+// import path, { dirname } from 'path';
+// import { fileURLToPath } from 'url';
+
+// import { Logtail } from '@logtail/node';
+// import { LogtailTransport } from '@logtail/winston';
+
+
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = dirname(__filename);
+
+// const logtail = new Logtail('token', {
+//     endpoint: 'ing_url',
+// });
+
 export class LoggerService {
     private static logger: winston.Logger;
 
@@ -52,6 +66,7 @@ export class LoggerService {
                         maxsize: 5 * 1024 * 1024,
                         maxFiles: 5,
                     }),
+                    // new LogtailTransport(logtail),
                 ],
             });
 
